@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Security updates are currently provided for the latest released version of CodeWeave AI.
+Security updates are currently provided for the latest released version of Editree AI.
 
 | Version | Supported |
 | ------- | --------- |
@@ -11,7 +11,7 @@ Security updates are currently provided for the latest released version of CodeW
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in CodeWeave AI, please report it privately rather than opening a public GitHub issue.
+If you discover a security vulnerability in Editree AI, please report it privately rather than opening a public GitHub issue.
 
 ### 📧 Report by Email
 
@@ -24,7 +24,7 @@ Please include:
 - A clear description of the vulnerability
 - Steps to reproduce the issue
 - The potential impact
-- The affected CodeWeave AI version
+- The affected Editree AI version
 - Any relevant screenshots, logs, or proof-of-concept details
 
 ### What to Expect
@@ -41,12 +41,12 @@ Please avoid publicly disclosing the vulnerability until a fix or appropriate mi
 
 ## Security Considerations
 
-CodeWeave AI can interact with external AI providers such as OpenAI, Gemini, and OpenRouter. Users should:
+Editree AI can interact with external AI providers such as OpenAI, Gemini, and OpenRouter. Users should:
 
 - Never share their API keys publicly.
-- Use CodeWeave AI's secure API-key storage mechanisms.
+- Use Editree AI's secure API-key storage mechanisms.
 - Review source code before sending it to external AI providers.
 - Avoid including passwords, tokens, credentials, or other sensitive information in AI requests.
-- Keep CodeWeave AI and VS Code updated.
+- Keep Editree AI and VS Code updated.
 
-Thank you for helping improve the security of CodeWeave AI.
+Thank you for helping improve the security of Editree AI.

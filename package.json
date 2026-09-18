@@ -1,31 +1,25 @@
 {
-  "name": "codeweave-ai",
-  "displayName": "CodeWeave AI",
+  "name": "editree-ai",
+  "displayName": "Editree AI",
   "description": "AI-powered project tree, project structure manager, file and folder manager, and code transformation toolkit for VS Code.",
   "version": "0.1.0",
   "publisher": "mahantheshdev",
   "license": "MIT",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/Mahi2708/codeweave-ai.git"
   },
-
   "bugs": {
     "url": "https://github.com/Mahi2708/codeweave-ai/issues"
   },
-
   "homepage": "https://github.com/Mahi2708/codeweave-ai",
-
   "engines": {
     "vscode": "^1.100.0"
   },
-
   "categories": [
     "Other",
     "Machine Learning"
   ],
-
   "keywords": [
     "project tree",
     "project structure",
@@ -50,7 +44,6 @@
     "developer tools",
     "refactoring"
   ],
-
   "activationEvents": [
     "onCommand:codeweave.generateTree",
     "onCommand:codeweave.openManager",
@@ -61,52 +54,47 @@
     "onCommand:codeweave.aiGenerateFile",
     "onCommand:codeweave.configureAi"
   ],
-
   "main": "./dist/extension.js",
-
   "icon": "images/icon.png",
-
   "galleryBanner": {
     "color": "#1E1E2E",
     "theme": "dark"
   },
-
   "contributes": {
     "commands": [
       {
         "command": "codeweave.generateTree",
-        "title": "CodeWeave: Generate Project Tree"
+        "title": "Editree: Generate Project Tree"
       },
       {
         "command": "codeweave.openManager",
-        "title": "CodeWeave: Open Project Manager"
+        "title": "Editree: Open Project Manager"
       },
       {
         "command": "codeweave.renamePath",
-        "title": "CodeWeave: Rename File or Folder"
+        "title": "Editree: Rename File or Folder"
       },
       {
         "command": "codeweave.createFile",
-        "title": "CodeWeave: Create File"
+        "title": "Editree: Create File"
       },
       {
         "command": "codeweave.createFolder",
-        "title": "CodeWeave: Create Folder"
+        "title": "Editree: Create Folder"
       },
       {
         "command": "codeweave.aiTransform",
-        "title": "CodeWeave: AI Transform Selected File"
+        "title": "Editree: AI Transform Selected File"
       },
       {
         "command": "codeweave.aiGenerateFile",
-        "title": "CodeWeave: AI Generate File"
+        "title": "Editree: AI Generate File"
       },
       {
         "command": "codeweave.configureAi",
-        "title": "CodeWeave: Configure AI Provider"
+        "title": "Editree: Configure AI Provider"
       }
     ],
-
     "menus": {
       "explorer/context": [
         {
@@ -135,7 +123,6 @@
           "group": "codeweave@6"
         }
       ],
-
       "editor/context": [
         {
           "command": "codeweave.aiTransform",
@@ -144,9 +131,8 @@
         }
       ]
     },
-
     "configuration": {
-      "title": "CodeWeave AI",
+      "title": "Editree AI",
       "properties": {
         "codeweave.aiProvider": {
           "type": "string",
@@ -156,47 +142,40 @@
             "openrouter"
           ],
           "default": "openrouter",
-          "description": "AI provider used by CodeWeave."
+          "description": "AI provider used by Editree."
         },
-
         "codeweave.aiModel": {
           "type": "string",
           "default": "openrouter/free",
           "description": "Model identifier. For OpenRouter use a provider/model slug; for OpenAI/Gemini use a model supported by your account."
         },
-
         "codeweave.respectGitignore": {
           "type": "boolean",
           "default": true,
           "description": "Exclude paths matched by workspace .gitignore files."
         },
-
         "codeweave.useFrameworkIgnores": {
           "type": "boolean",
           "default": true,
           "description": "Exclude common dependency, build, cache and generated directories based on detected project technology."
         },
-
         "codeweave.showIgnoredInSelector": {
           "type": "boolean",
           "default": false,
           "description": "Show ignored paths in the selector as disabled items."
         },
-
         "codeweave.maxDepth": {
           "type": "number",
           "default": 20,
           "minimum": 1,
           "maximum": 100,
-          "description": "Maximum directory depth scanned by CodeWeave."
+          "description": "Maximum directory depth scanned by Editree."
         },
-
         "codeweave.confirmAiFileSend": {
           "type": "boolean",
           "default": true,
           "description": "Ask for confirmation before sending source code to an external AI provider."
         },
-
         "codeweave.maxAiContextChars": {
           "type": "number",
           "default": 60000,
@@ -207,21 +186,18 @@
       }
     }
   },
-
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -p ./ --watch",
     "test": "npm run compile && node ./test/smoke.js",
     "package": "npm run compile && vsce package"
   },
-
   "devDependencies": {
-    "@types/node": "^22.10.0",
+    "@types/node": "^22.20.3",
     "@types/vscode": "^1.100.0",
-    "typescript": "^5.7.0",
-    "@vscode/vsce": "^3.6.0"
+    "@vscode/vsce": "^3.6.0",
+    "typescript": "^5.7.0"
   },
-
   "dependencies": {
     "ignore": "^7.0.5"
   }

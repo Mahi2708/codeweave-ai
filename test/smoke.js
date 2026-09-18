@@ -18,6 +18,6 @@ for (const file of required) {
 }
 
 const pkg = require("../package.json");
-if (pkg.name !== "codeweave-ai") throw new Error("Unexpected package name");
+if (pkg.name !== "editree-ai") throw new Error("Unexpected package name");
 
-console.log("CodeWeave AI smoke test passed.");
+console.log("Editree AI smoke test passed.");

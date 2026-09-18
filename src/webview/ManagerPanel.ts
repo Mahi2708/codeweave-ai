@@ -11,12 +11,12 @@ export class ManagerPanel {
     ) {}
 
     public show(
-    root: ProjectNode,
-    onRename: (
-        relativePath: string,
-        newName: string
-    ) => Promise<void>
-): void {
+        root: ProjectNode,
+        onRename: (
+            relativePath: string,
+            newName: string
+        ) => Promise<void>
+    ): void {
         this.root = root;
 
         if (this.panel) {
@@ -30,7 +30,7 @@ export class ManagerPanel {
 
         this.panel = vscode.window.createWebviewPanel(
             "codeweaveManager",
-            "CodeWeave AI",
+            "Editree AI",
             vscode.ViewColumn.One,
             {
                 enableScripts: true,
@@ -85,45 +85,45 @@ export class ManagerPanel {
                         }
 
                         case "rename": {
-    const relativePath =
-        String(message.relativePath);
+                            const relativePath =
+                                String(message.relativePath);
 
-    const currentName =
-        relativePath.split(/[\\/]/).pop() || "";
+                            const currentName =
+                                relativePath.split(/[\\/]/).pop() || "";
 
-    const newName =
-        await vscode.window.showInputBox({
-            title: "Rename",
-            prompt: "Enter the new file or folder name",
-            value: currentName,
-            validateInput: (value) => {
-                const trimmed = value.trim();
+                            const newName =
+                                await vscode.window.showInputBox({
+                                    title: "Rename",
+                                    prompt: "Enter the new file or folder name",
+                                    value: currentName,
+                                    validateInput: (value) => {
+                                        const trimmed = value.trim();
 
-                if (!trimmed) {
-                    return "Name cannot be empty.";
-                }
+                                        if (!trimmed) {
+                                            return "Name cannot be empty.";
+                                        }
 
-                if (
-                    /[<>:"/\\|?*]/.test(trimmed)
-                ) {
-                    return "Name contains invalid characters.";
-                }
+                                        if (
+                                            /[<>:"/\\|?*]/.test(trimmed)
+                                        ) {
+                                            return "Name contains invalid characters.";
+                                        }
 
-                return undefined;
-            }
-        });
+                                        return undefined;
+                                    }
+                                });
 
-    if (!newName) {
-        break;
-    }
+                            if (!newName) {
+                                break;
+                            }
 
-    await onRename(
-        relativePath,
-        newName.trim()
-    );
+                            await onRename(
+                                relativePath,
+                                newName.trim()
+                            );
 
-    break;
-}
+                            break;
+                        }
                     }
                 } catch (error) {
                     const message =
@@ -132,7 +132,7 @@ export class ManagerPanel {
                             : String(error);
 
                     vscode.window.showErrorMessage(
-                        `CodeWeave: ${message}`
+                        `Editree: ${message}`
                     );
                 }
             },
@@ -172,7 +172,7 @@ export class ManagerPanel {
         content="width=device-width, initial-scale=1.0"
     />
 
-    <title>CodeWeave AI</title>
+    <title>Editree AI</title>
 
     <style>
         * {
@@ -475,7 +475,7 @@ export class ManagerPanel {
 
 <body>
 
-    <h1>CodeWeave AI</h1>
+    <h1>Editree AI</h1>
 
     <div class="description">
         Select files and folders to generate a project tree.
