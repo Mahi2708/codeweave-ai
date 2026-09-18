@@ -65,4 +65,3 @@ code --install-extension codeweave-ai-0.1.0.vsix
 
 CodeWeave asks before sending source code to an external AI provider by default. Never commit API keys. Keys are stored in VS Code SecretStorage.
 
-Before public Marketplace release, add more tests, a polished icon, a privacy policy, provider-specific error handling, and a complete Marketplace listing.
