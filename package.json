@@ -6,12 +6,23 @@
   "publisher": "mahantheshdev",
   "license": "MIT",
 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mahi2708/codeweave-ai.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/Mahi2708/codeweave-ai/issues"
+  },
+
+  "homepage": "https://github.com/Mahi2708/codeweave-ai",
+
   "engines": {
     "vscode": "^1.100.0"
   },
 
   "categories": [
-    "Others",
+    "Other",
     "Machine Learning"
   ],
 

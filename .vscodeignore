@@ -11,3 +11,4 @@ README-dev.md
 *.log
 .env
 .env.*
+.gitignore
