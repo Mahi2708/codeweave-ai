@@ -1,0 +1,13 @@
+.vscode/**
+.git/**
+.github/**
+test/**
+src/**/*.ts
+src/**/*.map
+
+tsconfig.json
+README-dev.md
+
+*.log
+.env
+.env.*
